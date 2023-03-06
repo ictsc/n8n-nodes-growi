@@ -16,6 +16,20 @@ Information can be retrieved via Growi's API and incorporated into the n8n workf
 Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes/installation/) in the n8n community
 nodes documentation.
 
+### Community Install
+
+1. Open n8n
+2. Go to `Settings`
+3. Go to `Community Nodes`
+4. Click on `Install`
+5. Input `@icttroacon/n8n-nodes-growi` in the input field
+
+### Manual Install
+
+```
+npm install @icttroacon/n8n-nodes-growi
+```
+
 ## Operations
 
 ### Get Page
@@ -45,9 +59,8 @@ nodes documentation.
 
 ## Resources
 
-
 * [n8n community nodes documentation](https://docs.n8n.io/integrations/community-nodes/)
-	[Growi](https://growi.org/)
+* [Growi](https://growi.org/)
 
 ## Development
 
@@ -63,6 +76,12 @@ cp .env.example .env
 
 ```
 docker compose up -d
+```
+
+#### 3. Reload the Growi Node in n8n.
+
+```
+npm run build && docker compose restart && docker compose logs -f
 ```
 
 

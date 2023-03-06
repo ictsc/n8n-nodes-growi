@@ -8,12 +8,12 @@
 	"resources": {
 		"credentialDocumentation": [
 			{
-				"url": ""
+				"url": "https://github.com/ictsc/n8n-nodes-growi#credentials"
 			}
 		],
 		"primaryDocumentation": [
 			{
-				"url": ""
+				"url": "https://github.com/ictsc/n8n-nodes-growi"
 			}
 		]
 	}
