@@ -24,20 +24,22 @@ export class GrowiNode implements INodeType {
 				displayName: 'Operation',
 				name: 'operation',
 				type: 'options',
+				noDataExpression: true,
 				options: [
 					{
 						name: 'Page',
 						value: 'page',
-						description: 'Get page by pagePath or pageId',
+						description: 'Get page by page path or page ID',
+						action: 'Get page by page path or page id',
 					},
 					{
 						name: 'Subordinated Pages',
 						value: 'subordinatedPages',
 						description: 'Get subordinated pages',
+						action: 'Get subordinated pages',
 					},
 				],
 				default: 'page',
-				description: 'The operation to perform.',
 			},
 			{
 				displayName: 'Path',
