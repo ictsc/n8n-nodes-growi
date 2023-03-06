@@ -15,6 +15,9 @@
     "type": "git",
     "url": "https://github.com/ictsc/n8n-nodes-growi"
   },
+  "publishConfig": {
+    "registry": "https://github.com/ictsc/n8n-nodes-growi"
+  },
   "main": "index.js",
   "scripts": {
     "build": "tsc && gulp build:icons",
