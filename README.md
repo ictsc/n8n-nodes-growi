@@ -32,12 +32,19 @@ nodes documentation.
 	* Access Token for Growi
 2. Host
 	* Host for Growi
+	
+**Image**
+	
+<img width="512" alt="スクリーンショット 2023-03-06 18 59 02" src="https://user-images.githubusercontent.com/50326556/223078296-bb99af94-0df5-467f-be00-646e1b941852.png">
+<img width="512" alt="n8n image" src="https://user-images.githubusercontent.com/50326556/223077553-790d9de0-c812-4e48-a8c8-0879d702b45b.png">
+
 
 ## Compatibility
 
 - n8n: 0.218.0~
 
 ## Resources
+
 
 * [n8n community nodes documentation](https://docs.n8n.io/integrations/community-nodes/)
 	[Growi](https://growi.org/)
