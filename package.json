@@ -1,6 +1,6 @@
 {
   "name": "@ictsc/n8n-nodes-growi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "n8n nodes for Growi",
   "keywords": [
     "n8n-community-node-package"
