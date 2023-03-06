@@ -33,7 +33,7 @@
       "dist/credentials/GrowiApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/GrowiNode/GrowiNode.node.js"
+      "dist/nodes/Growi/Growi.node.js"
     ]
   },
   "devDependencies": {

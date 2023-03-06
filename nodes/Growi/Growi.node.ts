@@ -1,7 +1,7 @@
 import { INodeExecutionData, INodeType, INodeTypeDescription, jsonParse } from 'n8n-workflow';
 import { IExecuteFunctions } from 'n8n-core';
 
-export class GrowiNode implements INodeType {
+export class Growi implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Growi',
 		name: 'growi',

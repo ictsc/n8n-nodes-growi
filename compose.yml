@@ -38,7 +38,7 @@ services:
     links:
       - postgres
     volumes:
-      - ./dist:/home/node/.n8n/custom/n8n-nodes-growi
+      - ./dist:/home/node/.n8n/custom/@icttroacon/n8n-nodes-growi
     command: n8n start
     depends_on:
       postgres:
