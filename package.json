@@ -1,15 +1,15 @@
 {
-  "name": "n8n-nodes-growi",
-  "version": "0.1.0",
-  "description": "",
+  "name": "@ictsc/n8n-nodes-growi",
+  "version": "1.0.0",
+  "description": "n8n nodes for Growi",
   "keywords": [
     "n8n-community-node-package"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://icttoracon.net/",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "ICTSC",
+    "email": "ictsc-contact@icttoracon.net"
   },
   "repository": {
     "type": "git",
