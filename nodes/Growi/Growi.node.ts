@@ -77,45 +77,49 @@ export class Growi implements INodeType {
 
 		const operation = this.getNodeParameter('operation', 0);
 
-		if (operation === 'page') {
-			const path = this.getNodeParameter('path', 1, '/') as string;
+		const items = this.getInputData();
+		const length = items.length;
+		for (let i = 0; i < length; i++) {
+			if (operation === 'page') {
+				const path = this.getNodeParameter('path', i, '/') as string;
 
-			const url = `${baseUrl}v3/page?access_token=${token}&path=${path}`;
+				const url = `${baseUrl}v3/page?access_token=${token}&path=${path}`;
 
-			const response = await this.helpers.request({
-				method: 'GET',
-				url: url,
-				headers: {
-					'Content-Type': 'application/json',
-				},
-			});
-
-			returnData.push({
-				json: {
-					page: jsonParse(response),
-				},
-			});
-		} else if (operation === 'subordinatedPages') {
-			const path = this.getNodeParameter('path', 0, '/') as string;
-			const limit = this.getNodeParameter('limit', 0, '10') as string;
-
-			const url = `${baseUrl}v3/pages/subordinated-list?access_token=${token}&path=${path}&limit=${limit}`;
-			const response = await this.helpers.request({
-				method: 'GET',
-				url: url,
-				headers: {
-					'Content-Type': 'application/json',
-				},
-			});
-
-			const subordinatedPages = (jsonParse(response) as any)['subordinatedPages'];
-
-			for (const page of subordinatedPages) {
-				returnData.push({
-					json: {
-						page: page,
+				const response = await this.helpers.request({
+					method: 'GET',
+					url: url,
+					headers: {
+						'Content-Type': 'application/json',
 					},
 				});
+
+				returnData.push({
+					json: {
+						page: jsonParse(response),
+					},
+				});
+			} else if (operation === 'subordinatedPages') {
+				const path = this.getNodeParameter('path', i, '/') as string;
+				const limit = this.getNodeParameter('limit', i, '10') as string;
+
+				const url = `${baseUrl}v3/pages/subordinated-list?access_token=${token}&path=${path}&limit=${limit}`;
+				const response = await this.helpers.request({
+					method: 'GET',
+					url: url,
+					headers: {
+						'Content-Type': 'application/json',
+					},
+				});
+
+				const subordinatedPages = (jsonParse(response) as any)['subordinatedPages'];
+
+				for (const page of subordinatedPages) {
+					returnData.push({
+						json: {
+							page: page,
+						},
+					});
+				}
 			}
 		}
 
