@@ -46,8 +46,24 @@ export class Growi implements INodeType {
 				name: 'path',
 				type: 'string',
 				default: '',
-				placeholder: 'Placeholder value',
-				description: 'The description text',
+				placeholder: '/',
+				description: 'The description text Default: /',
+			},
+			//
+			// Subordinated Pages
+			//
+			{
+				displayName: 'Limit',
+				name: 'limit',
+				type: 'string',
+				default: '',
+				placeholder: '10',
+				description: 'The limit of the number of pages to be returned Default: 10',
+				displayOptions: {
+					show: {
+						operation: ['subordinatedPages'],
+					},
+				},
 			},
 		],
 	};
@@ -80,10 +96,10 @@ export class Growi implements INodeType {
 				},
 			});
 		} else if (operation === 'subordinatedPages') {
-			const path = this.getNodeParameter('path', 1, '/') as string;
+			const path = this.getNodeParameter('path', 0, '/') as string;
+			const limit = this.getNodeParameter('limit', 0, '10') as string;
 
-			const url = `${baseUrl}v3/pages/subordinated-list?access_token=${token}&path=${path}`;
-
+			const url = `${baseUrl}v3/pages/subordinated-list?access_token=${token}&path=${path}&limit=${limit}`;
 			const response = await this.helpers.request({
 				method: 'GET',
 				url: url,
