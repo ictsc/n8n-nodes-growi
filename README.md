@@ -55,7 +55,7 @@ npm install @icttroacon/n8n-nodes-growi
 
 ## Compatibility
 
-- n8n: 0.218.0~
+* n8n: 0.218.0~
 
 ## Resources
 
